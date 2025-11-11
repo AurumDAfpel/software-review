@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .contenedor {
+            background-color: whitesmoke;
+            width: 80%;
+            height: 80%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: auto auto auto;
+
+            gap: 20px;
+            padding: 20px;
+            text-align: center;
+            border-radius: 15px;
+        }
+
+        .grid-item1 {
+            grid-column: span 3;
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 3; 
+        }
+
+        .grid-item1 .titulo {
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        .grid-item2, .grid-item3, .grid-item4, .grid-item5, .grid-item6, .grid-item7, .grid-item8, .grid-item9 {
+            background-color: #e0e0e0;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px; 
+            width: 300px; 
+            margin: 0 auto;
+        }
+
+        .grid-item2 {
+            background-color: #ff9f00;
+        }
+
+        .grid-item3 {
+            background-color: #c4c4c4;
+        }
+
+        .grid-item4 {
+            background-color: #222;
+        }
+
+        .grid-item5 {
+            background-color: #c4c4c4;
+        }
+
+        .grid-item6 {
+            background-color: #ff9f00;
+        }
+
+        .grid-item7 {
+            background-color: #222;
+        }
+
+        .grid-item8 {
+            background-color: #c4c4c4;
+        }
+
+        .grid-item9 {
+            background-color: #222;
+        }
+
+        .grid-item3 img,
+        .grid-item4 img,
+        .grid-item5 img,
+        .grid-item6 img,
+        .grid-item8 img {
+            width: 50%;
+            height: auto;
+        }
+
+        .grid-item1 p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #ddd;
+        }
+
+        @media (min-width: 1024px) {
+            .contenedor {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 1024px) and (min-width: 768px) {
+            .contenedor {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contenedor {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="grid-item1">
+            <div class="titulo">Grid Layout</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eaque numquam maxime rerum provident, aliquid, natus officiis, perspiciatis magni voluptas sunt velit odit obcaecati quae voluptates? Aliquam nisi sapiente temporibus impedit!</p>
+        </div>
+        <div class="grid-item2"></div>
+        <div class="grid-item3">
+            <img src="imagenes/icon-megaphone.png" alt="icon-megaphone">
+        </div>
+        <div class="grid-item4">
+            <img src="imagenes/icon-bicycle.png" alt="icon-bicycle">
+        </div>
+        <div class="grid-item5">
+            <img src="imagenes/icon-bug.png" alt="icon-bug">
+        </div>
+        <div class="grid-item6">
+            <img src="imagenes/icon-fast-food.png" alt="icon-fast-food">
+        </div>
+        <div class="grid-item7"></div>
+        <div class="grid-item8">
+            <img src="imagenes/icon-game-controller.png" alt="icon-game-controller">
+        </div>
+        <div class="grid-item9"></div>
+    </div>
+</body>
+</html>
